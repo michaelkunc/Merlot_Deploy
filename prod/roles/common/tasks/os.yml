@@ -9,23 +9,30 @@
    state: present
   become: true
 
-- name: ensure epel is installed on the os.
+- name: instal epel
   yum: 
     name: epel-release
     state: present
   become: true
 
-- name: ensure pip is installed on the os.
+- name: install the 'Development tools' package group
+  yum:
+    name: "@Development tools"
+    state: present
+  become: true
+
+- name: install pip
   yum:
     name: python-pip
     state: present
   become: true
 
-- name: ensure virtualenv is installed on the os.
+- name: instal virtualenv
   pip:
     name: virtualenv
     state: present
-  become: yes
+  become: true
+
 
 
 

@@ -21,3 +21,8 @@
 - name: make sure mysql is running.
   command: systemctl start mysqld
   become: true
+
+- name: Install mysql-devel
+  yum:
+    name: mysql-devel
+  become: true
