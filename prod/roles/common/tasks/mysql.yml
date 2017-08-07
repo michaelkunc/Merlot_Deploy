@@ -1,0 +1,19 @@
+# /usr/bin/mysqladmin -u root password 'admin'
+
+- name: download the mysql repo.
+  get_url:
+    url: http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+    dest: "{{fake_data_dir}}"
+
+- name: yum update
+  yum: name=* state=latest
+
+- name: install mysql server
+  yum:
+    name: mysql-server
+  become: true
+
+- name: make sure mysql is running.
+  systemd:
+    name: mysqld
+  become: true

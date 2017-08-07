@@ -1,3 +1,14 @@
+
+- name: update packages via yum.
+  yum: name=* state=latest
+  become: true
+
+- name: install wget
+  yum: 
+   name: wget
+   state: present
+  become: true
+
 - name: ensure epel is installed on the os.
   yum: 
     name: epel-release
@@ -13,8 +24,8 @@
 - name: ensure virtualenv is installed on the os.
   pip:
     name: virtualenv
+    state: present
   become: yes
 
 
 
-DONT FORGET TO INSTALL THE EXTRA MYSQL PACKAGE WE NEED
