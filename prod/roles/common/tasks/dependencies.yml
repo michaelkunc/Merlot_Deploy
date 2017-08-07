@@ -1,0 +1,9 @@
+- name: ensure virtualenv dir is created
+  file: 
+    path: "{{fake_data_venv_dir}}"
+    state: directory
+
+- name: install dependencies into virtualenv
+  pip:
+    requirements: "{{fake_data_dir}}/requirements.txt"
+    virtualenv: "{{fake_data_venv_dir}}"

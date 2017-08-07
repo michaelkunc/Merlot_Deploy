@@ -1,7 +1,7 @@
 deploy_user: deployer
 deploy_group: deployers
-fake_data_dir: /home/{{deploy_user}}/fake_data
-fake_data_venv_dir: /home/{{deployers}}/envs/fake_data
+fake_data_dir: /home/{{deploy_user}}/apps/
+fake_data_venv_dir: "{{fake_data_dir}}/envs/"
 venv_python: "{{fake_data_venv_dir}}/bin/python"
 fake_data_repo: https://github.com/dhruvsethi22/July_2017.git
 

@@ -9,3 +9,12 @@
     name: python-pip
     state: present
   become: true
+
+- name: ensure virtualenv is installed on the os.
+  pip:
+    name: virtualenv
+  become: yes
+
+
+
+DONT FORGET TO INSTALL THE EXTRA MYSQL PACKAGE WE NEED
