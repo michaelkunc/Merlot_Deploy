@@ -1,0 +1,11 @@
+- name: ensure epel is installed on the os.
+  yum: 
+    name: epel-release
+    state: present
+  become: true
+
+- name: ensure pip is installed on the os.
+  yum:
+    name: python-pip
+    state: present
+  become: true

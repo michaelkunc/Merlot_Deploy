@@ -1,3 +1,4 @@
+- include: os.yml
 - include: git.yml
 # - include: mysql.yml
 # - include: dependencies.yml
