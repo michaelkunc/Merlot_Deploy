@@ -1,0 +1,8 @@
+- name: ensure git is installed via system package
+  yum: 
+    name: git 
+    state: present
+  become: true 
+
+- name: clone latest fake data code from repo
+  git: repo={{fake_data_repo}} dest={{fake_data_dir}}

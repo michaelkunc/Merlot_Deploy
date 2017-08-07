@@ -1,0 +1,5 @@
+- name: apply common config to server
+  hosts: all
+  user: deployer
+  roles: 
+    - common
