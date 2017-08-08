@@ -27,12 +27,17 @@
     state: present
   become: true
 
-- name: instal virtualenv
+- name: install virtualenv
   pip:
     name: virtualenv
     state: present
   become: true
 
+- name: install unzip
+  yum:
+    name: unzip
+    state: present
+  become: true 
 
 
 

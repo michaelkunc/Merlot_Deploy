@@ -1,6 +1,6 @@
-- include: os.yml
-- include: git.yml
-- include: mysql.yml
-- include: dependencies.yml
-- include: fake_data.yml
+# - include: os.yml
+# - include: git.yml
+# - include: mysql.yml
+# - include: dependencies.yml
+# - include: fake_data.yml
 - include: golden_gate.yml

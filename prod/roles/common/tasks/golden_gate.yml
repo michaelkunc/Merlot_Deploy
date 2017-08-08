@@ -19,3 +19,7 @@
 #     src: ../files/V100692-01.zip
 #     dest: "{{golden_gate_dir}}"
 #     mode: a+x
+
+##unzipped correctly. need to change destination dir.
+- name: unzip gg files
+  command: unzip {{golden_gate_dir}}/V100692-01.zip
