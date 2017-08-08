@@ -1,0 +1,11 @@
+- name: change connection string for mysql
+  copy:
+    src: ../files/mysql_connection.py
+    dest: "{{fake_data_dir}}"
+
+#seems to be an issue with activating the virtual env.
+# - name: source virtualenv
+#   command: source home/deployer/apps/envs/bin/activate
+
+# - name: hydrate database.
+#   command:  python {{fake_data_dir}}load_data.py
