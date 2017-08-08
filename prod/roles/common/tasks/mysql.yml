@@ -26,3 +26,14 @@
   yum:
     name: mysql-devel
   become: true
+
+- name: Instal MySql-Python
+  yum:
+    name: MySQL-python
+  become: true
+
+- name: Create transactions database
+  mysql_db:
+    name: transactions
+    state: present
+    login_user : root
