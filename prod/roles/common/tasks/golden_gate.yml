@@ -1,0 +1,21 @@
+- name: create golden gate install dir
+  file: path={{golden_gate_dir}} state=directory
+
+
+- name: copy env variable script
+  copy:
+    src: ../files/set_gg_env_var.sh
+    dest: "{{deploy_user_dir}}"
+    mode: a+x
+
+- name: set gg environment variables
+  shell:  source {{deploy_user_dir}}set_gg_env_var.sh
+  args:
+    executable: /bin/bash
+
+#do not need to re-copy this file every time
+# - name: copy zip file for golden_gate_dir
+#   copy: 
+#     src: ../files/V100692-01.zip
+#     dest: "{{golden_gate_dir}}"
+#     mode: a+x

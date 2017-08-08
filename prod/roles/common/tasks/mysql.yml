@@ -37,3 +37,11 @@
     name: transactions
     state: present
     login_user : root
+
+- name: Create Golden Gate MySQL user
+  mysql_user:
+    login_user: root
+    name: ggadmin
+    password: ggadmin
+    priv: '*.*:ALL'
+    state: present

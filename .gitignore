@@ -2,3 +2,4 @@ ssh_keys/
 *.pyc
 fabfile.py
 prod/deploy.retry
+*.zip
